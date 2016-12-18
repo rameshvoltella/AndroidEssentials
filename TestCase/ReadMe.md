@@ -23,7 +23,7 @@ In software development there is an opportunity of ensuring that objects perform
 
 Add dependency
 
-    'dependencies {
+    dependencies {
    
     // Required -- JUnit 4 framework
     testCompile 'junit:junit:4.12'
@@ -31,7 +31,46 @@ Add dependency
     testCompile 'org.mockito:mockito-core:1.10.19'
     }
 
-'
+Write Test case with '@Test'
+
+
+
+Run Local Unit Tests
+
+To run your local unit tests, follow these steps:
+
+    Be sure your project is synchronized with Gradle by clicking Sync Project in the toolbar.
+    Run your test in one of the following ways:
+        To run a single test, open the Project window, and then right-click a test and click Run .
+        To test all methods in a class, right-click a class or method in the test file and click Run .
+        To run all tests in a directory, right-click on the directory and select Run tests .
+
+The Android Plugin for Gradle compiles the local unit test code located in the default directory (src/test/java/), builds a test app, and executes it locally using the default test runner class. Android Studio then displays the results in the Run window. 
+
+
+## Using Mockito
+
+Mockito supports the creation of mock objects. For this you can use the static mock() method.
+
+Mockito also supports the creation of mock objects based on the @Mock annotation.
+
+If you use this annotation, you must initialize the mock objects. The MockitoRule allows this. It invokes the static method MockitoAnnotations.initMocks(this) to populate the annotated fields. Alternatively you can use @RunWith(MockitoJUnitRunner.class)
+
+@Mock- Tells Mockito to mock the give value
+
+eg:@Mock
+    Context mMockContext;(Tells Mockito to mock the mMockContext
+ instance)
+
+
+@Before- When writing tests, it is common to find that several tests need similar objects created before they can run @Before is used for that.
+
+
+
+
+
+
+ 
 
 
 
