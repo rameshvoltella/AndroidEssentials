@@ -9,7 +9,6 @@ import static org.mockito.Mockito.*;
 import org.junit.Test;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
 import com.ramz.testcase.util.MokitoTestRun;
 
