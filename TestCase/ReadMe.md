@@ -18,3 +18,20 @@ In software development there is an opportunity of ensuring that objects perform
 
 
 
+
+##Use of JUnit
+
+Add dependency
+
+    'dependencies {
+   
+    // Required -- JUnit 4 framework
+    testCompile 'junit:junit:4.12'
+    // Optional -- Mockito framework
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    }
+
+'
+
+
+

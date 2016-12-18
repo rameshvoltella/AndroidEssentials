@@ -12,10 +12,9 @@ import android.content.Context;
 
 import com.ramz.testcase.util.MokitoTestRun;
 
-/**
- * Created by munnaz on 18/12/16.
- */
 
+
+//Run with is the frame work you like to use Mockito is highly used
 @RunWith(MockitoJUnitRunner.class)
 public class MokitoTest {
     private static final String FAKE_STRING = "HELLO WORLD";
