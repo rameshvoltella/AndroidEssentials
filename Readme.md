@@ -13,5 +13,9 @@ AndroidEssentials is module which give some of important things we should take c
 
 ## Improving the performance of Gradle builds //Todo
 
+## Continuous Integration //Todo
+
+## Using ConstraintLayout
+
 ## Memory leak Solution //Todo
 
