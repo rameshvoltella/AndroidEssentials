@@ -279,9 +279,7 @@ if your build is a failing the log will be some thing like screen below with lab
 
 So travis is so simple as we compare with jenkin.
 
-Optional: you can add your project build status in your readme by giving the 
-
-##[![master](https://api.travis-ci.org/yourprofilename/yourproject.svg?branch=master)](https://travis-ci.org/yourprofilename/yourproject)
+Optional: you can add your project build status in your readme by adding a tag [click here to see the tag ](https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/file/buildlabel).
 
 so that you can find easily whether you build is a pass or fail
 
