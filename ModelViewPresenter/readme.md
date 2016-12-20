@@ -17,6 +17,9 @@ The view, usually implemented by an Activity (it may be a Fragment, a View… de
 
 In an application with a good layered architecture, this model would only be the gateway to the domain layer or business logic.
 
+
+Please check the source code to understand how to write a basic mvp structure
+
 ##MVP Diagram
 
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ModelViewPresenter/img/mvp.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ModelViewPresenter/img/mvp.png" alt="Screenshot" style="max-width:100%;"></a></p>
