@@ -1,3 +1,5 @@
+##Continuous Integration in Android
+
 In software engineering, continuous integration (CI) is the practice of merging all developer working copies to a shared mainline several times a day. Grady Booch first named and proposed CI in his 1991 method,[1] although he did not advocate integrating several times a day. Extreme programming (XP) adopted the concept of CI and did advocate integrating more than once per day - perhaps as many as tens of times per day.
 
 In this section we are discussing about integrating Jenkin and Travis CI
