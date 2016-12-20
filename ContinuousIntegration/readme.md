@@ -10,8 +10,32 @@ Builds can be triggered by various means, for example by commit in a version con
 
 Jenkins functionality can be extended with plugins.
 
-Follow the steps to play with jenkin
+##Jenkin for Ubandu
 
-1)go to https://jenkins.io/ click on download tab.choose which platform or type of junkin you need to install am using ubandu for this tutorial
+Follow the steps to play with jenkin 
+
+1)go to https://jenkins.io/ click on download tab.choose which platform or type of junkin you need to install am using ubandu for this tutorial, so that you can use select latest or any specific version of jenkin you need to use
 
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/Screenshot%20from%202016-12-20%2012-41-02.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/Screenshot%20from%202016-12-20%2012-41-02.png" alt="Screenshot one" style="max-width:100%;"></a></p>
+
+if you need to use latest build go to terminal
+
+follow the cammands
+
+* Installation
+
+    wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+    sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    sudo apt-get update
+    sudo apt-get install jenkins
+
+* Upgrade
+
+Once installed like this, you can update to the later version of Jenkins (when it comes out) by running the following commands:
+
+    sudo apt-get update
+    sudo apt-get install jenkins
+
+(aptitude or apt-get doesn't make any difference.)
+
+
