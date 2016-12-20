@@ -1,5 +1,7 @@
 In software engineering, continuous integration (CI) is the practice of merging all developer working copies to a shared mainline several times a day. Grady Booch first named and proposed CI in his 1991 method,[1] although he did not advocate integrating several times a day. Extreme programming (XP) adopted the concept of CI and did advocate integrating more than once per day - perhaps as many as tens of times per day.
 
+In this section we are discussing about integrating Jenkin and Travis CI
+
 ##Jenkins
 
 Jenkins is an open source automation server written in Java. The project was forked from Hudson after a dispute with Oracle.
@@ -176,6 +178,7 @@ In screen shot the jenkin say what went wrong this is a awesome feature, so that
 * Go to Global properties and tick the Environment variables  and press add option 
 
 1)Set the name as ANDROID_HOME
+
 2)put the path of your android sdk in Value field example my sdk path is /home/munnaz/Android/Sdk
 
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p201.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p201.png" alt="p201" style="max-width:100%;"></a></p>
@@ -193,7 +196,9 @@ In screen shot the jenkin say what went wrong this is a awesome feature, so that
 if the you complete this tutorial you have set your first jenkin continuous integration (CI) Sucessfully.(Cheers)
 
 
-//More document is comming please wait :)
+##Travis
+
+//Travis document is comming please wait :)
 
 
 
