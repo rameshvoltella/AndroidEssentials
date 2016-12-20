@@ -54,7 +54,7 @@ you need to unlock the jenkin first using a passord which is under /var/lib/jenk
 
 -->just view the IntialAdminPassword file ,you can see the secret key.(in terminal type cat /var/lib/jenkins/secrets/InitialAdminPassword)
 
-you will ge a key like this c3ca6360fa014c5d9143286484696217 paste in the unlock field and countinue
+you will get a key like this c3ca6360fa014c5d9143286484696217 paste in the unlock field and countinue
 
 3)Next we need to install the plugin, you will see two option one is install the recommended plugin other is custum selection where you can selct plugin you need to install other can be igonored
 
@@ -66,9 +66,9 @@ please follow this step before you install Jenkin 2.0
 
 There is bug in Jenkin 2.0 if you using this version and select recommended plugin to countinue you will be in a dead lock state and cant be countinue to the next level of jenkin. so i recommend to follow this step
 
-*go to https://issues.jenkins-ci.org/browse/JENKINS-35523 check whether the issue is resolved  if it is resolved countine normally 
+* go to https://issues.jenkins-ci.org/browse/JENKINS-35523 check whether the issue is resolved  if it is resolved countine normally 
 
-*if issue un resolved use option to select the plugin you need to install untick the two plugins
+* if issue un resolved use option to select the plugin you need to install untick the two plugins
 
    1)Github Organization Folder Plugin
    2)Pipeline plugin
