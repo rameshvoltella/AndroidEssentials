@@ -54,6 +54,8 @@ for more go to https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on
 
 you need to unlock the jenkin first using a passord which is under /var/lib/jenkins/secrets
 
+open terminal
+
 -->Then login as root user: sudo su
 
 -->then go to the below path: cd /var/lib/jenkins/secrets
