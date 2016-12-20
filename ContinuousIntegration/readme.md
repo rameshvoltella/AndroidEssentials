@@ -38,7 +38,57 @@ Once installed like this, you can update to the later version of Jenkins (when i
 
     sudo apt-get update
     sudo apt-get install jenkins
-
 (aptitude or apt-get doesn't make any difference.)
+
+for more go to https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+
+2)Once you install jenkin go to http://localhost:8080/ so if you running for the first time you will see this screen
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/EeLNT.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/EeLNT.png" alt="Screenshot two" style="max-width:100%;"></a></p>
+
+you need to unlock the jenkin first using a passord which is under /var/lib/jenkins/secrets
+
+-->Then login as root user: sudo su
+
+-->then go to the below path: cd /var/lib/jenkins/secrets
+
+-->just view the IntialAdminPassword file ,you can see the secret key.(in terminal type cat /var/lib/jenkins/secrets/InitialAdminPassword)
+
+you will ge a key like this c3ca6360fa014c5d9143286484696217 paste in the unlock field and countinue
+
+3)Next we need to install the plugin, you will see two option one is install the recommended plugin other is custum selection where you can selct plugin you need to install other can be igonored
+
+##Warning Jenkins 2.0 stuck during initial install
+
+please follow this step before you install Jenkin 2.0
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/triGn.jpg" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/triGn.jpg" alt="Screenshot three" style="max-width:100%;"></a></p>
+
+There is bug in Jenkin 2.0 if you using this version and select recommended plugin to countinue you will be in a dead lock state and cant be countinue to the next level of jenkin. so i recommend to follow this step
+
+*go to https://issues.jenkins-ci.org/browse/JENKINS-35523 check whether the issue is resolved  if it is resolved countine normally 
+
+*if issue un resolved use option to select the plugin you need to install untick the two plugins
+
+   1)Github Organization Folder Plugin
+   2)Pipeline plugin
+
+and countinue the installation other wise you need to downgrade or unistall the jenkin and want to follow the steps again
+
+##To unistall jenkin follow this
+
+    sudo apt-get remove jenkins
+    sudo apt-get remove --auto-remove jenkins
+
+
+Great now you have sucessfully installed jenkins
+
+//More document is comming please wait :)
+
+
+
+
+
+
 
 
