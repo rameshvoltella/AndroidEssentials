@@ -56,7 +56,7 @@ you need to unlock the jenkin first using a passord which is under /var/lib/jenk
 
 you will get a key like this c3ca6360fa014c5d9143286484696217 paste in the unlock field and countinue
 
-3) Next we need to install the plugin, you will see two option one is install the recommended plugin other is custum selection where you can selct plugin you need to install other can be igonored
+3) Next we need to install the plugin, you will see two option one is install the recommended plugin other is custum selection where you can select plugin you need to install other can be igonored
 
 ##Warning Jenkins 2.0 stuck during initial install
 
@@ -83,7 +83,7 @@ and countinue the installation other wise you need to downgrade or unistall the 
 
 Great now you have sucessfully installed jenkins
 
-5)As we are using jenkin for android make sure we have the following three plugin installed
+4)As we are using jenkin for android make sure we have the following three plugin installed
 
 * Android Emulator Plugin
 * Gradle Plugin
@@ -93,7 +93,7 @@ To check go to plugin manager to check this in the installed tab if this not ins
 
 The below screen shot show how to navigate to the jenkin plugin manager
 
-<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/pluginmanage.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/pluginmanage,png" alt="pluginmanage" style="max-width:100%;"></a></p>
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/pluginmanage.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/pluginmanage.png" alt="pluginmanage" style="max-width:100%;"></a></p>
 
 
 Checking the three plugin in screen shot you can see the mentioned plugin installed
@@ -109,13 +109,13 @@ Git plugin
 Gradle Plugin
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/gradelplug.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/gradelplug.png" alt="gradelplug" style="max-width:100%;"></a></p>
 
-so if above plugin are installed let create oru first project
+so if above plugin are installed let create our first project
 
-4) Now lets create our first project click start project or new item option from left side of the panel. Enter the item name thats your project name and select FreestyleProject option and click ok you first project has been created
+5) Now lets create our first project click start project or new item option from left side of the panel. Enter the item name thats your project name and select FreestyleProject option and click ok you first project has been created
 
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p1.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p1.png" alt="p1" style="max-width:100%;"></a></p>
 
-5)Now go to the Configure option of the created folder
+6)Now go to the Configure option of the created folder
 
 add your project in the git to the GitHub project option and paste your git repo url
 
@@ -140,7 +140,58 @@ so after this step you can see your project workspace on the jenkin console unde
 
 <p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p5.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p5.png" alt="p5" style="max-width:100%;"></a></p>
 
-So we have set up the project sucess fully now what we need to do is wee need to set the build step under build tab
+So we have set up the project sucess fully now what we need to do is to set the build step under build tab
+
+7)click on build step option in build tab and select Invoke Gradel Script 
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p9.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p9.png" alt="p9" style="max-width:100%;"></a></p>
+
+
+
+* Set the option as per the following screen shot
+
+1)In Tasks section add:    build --stacktrace
+2)Root Build script
+
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p101.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p101.png" alt="p101" style="max-width:100%;"></a></p>
+
+
+8)Apply and save and after that click on Build Now again which start the Countinues Integartion using Jenkin
+
+You can see the build is running in the Build History section
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p102.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p102.png" alt="p102" style="max-width:100%;"></a></p>
+
+After the buld complete in my case it failed see the screenshot below
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p104.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p104.png" alt="p104" style="max-width:100%;"></a></p>
+
+In screen shot the jenkin say what went wrong this is a awesome feature, so that we can identify the issue easily, so in my case i havent set my Android sdk path. This is a common error occur when we start to play with jenkin, No worrys we can set it  just follow the steps below
+
+* Go to configuration setting
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p200.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p200.png" alt="p200" style="max-width:100%;"></a></p>
+
+* Go to Global properties and tick the Environment variables  and press add option 
+
+1)Set the name as ANDROID_HOME
+2)put the path of your android sdk in Value field example my sdk path is /home/munnaz/Android/Sdk
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p201.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p201.png" alt="p201" style="max-width:100%;"></a></p>
+
+* Again scroll down and go to Android option in that there is a field for Android SDK root set the path of android sdk there also.
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p202.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p202.png" alt="p202" style="max-width:100%;"></a></p>
+
+9)Save and click Build Now again if everything goes right you will get a build sucess
+
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p206.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/p206.png" alt="p206" style="max-width:100%;"></a></p>
+
+
+if the you complete this tutorial you have set your first jenkin continuous integration (CI) Sucessfully.(Cheers)
+
 
 //More document is comming please wait :)
 
