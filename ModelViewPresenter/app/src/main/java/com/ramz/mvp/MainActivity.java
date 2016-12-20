@@ -8,6 +8,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements FileView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fileListRecylerView = (RecyclerView) findViewById(R.id.recycler_view);
-
+        fileListRecylerView.setLayoutManager(new LinearLayoutManager(this));
         fileListRecylerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(getApplicationContext(), fileListRecylerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override

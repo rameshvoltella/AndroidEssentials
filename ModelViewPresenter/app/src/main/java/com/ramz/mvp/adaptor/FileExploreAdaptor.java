@@ -41,7 +41,7 @@ public class FileExploreAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return fileList.length;
     }
 
 
