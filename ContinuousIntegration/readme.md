@@ -9,3 +9,9 @@ Jenkins helps to automate the non-human part of the whole software development p
 Builds can be triggered by various means, for example by commit in a version control system, by scheduling via a cron-like mechanism and by requesting a specific build URL. It can also be triggered after the other builds in the queue have completed.
 
 Jenkins functionality can be extended with plugins.
+
+Follow the steps to play with jenkin
+
+1)go to https://jenkins.io/ click on download tab.choose which platform or type of junkin you need to install am using ubandu for this tutorial
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/Screenshot%20from%202016-12-20%2012-41-02.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/Screenshot%20from%202016-12-20%2012-41-02.png" alt="Screenshot one" style="max-width:100%;"></a></p>
