@@ -5,17 +5,17 @@ AndroidEssentials is module which give some of important things we should take c
 
 ##Test Case
 
-* Junit //More to come
+* Junit
 
 * Instrumental //Todo
+
+## Continuous Integration 
 
 ## Model View Presenter //Todo
 
 ## Improving the performance of Gradle builds //Todo
 
-## Continuous Integration //Todo
-
-## Using ConstraintLayout
+## Using ConstraintLayout //Todo
 
 ## Memory leak Solution //Todo
 

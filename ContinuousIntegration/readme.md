@@ -12,6 +12,8 @@ Builds can be triggered by various means, for example by commit in a version con
 
 Jenkins functionality can be extended with plugins.
 
+if you want to install jenkin in windows please see this tutorial https://www.youtube.com/watch?v=h74i7krG33Y&t=91s
+
 ##Jenkin for Ubandu
 
 Follow the steps to play with jenkin 
@@ -73,15 +75,10 @@ There is bug in Jenkin 2.0 if you using this version and select recommended plug
 * if issue un resolved use option to select the plugin you need to install untick the two plugins
 
    1)Github Organization Folder Plugin
+   
    2)Pipeline plugin
 
-and countinue the installation other wise you need to downgrade or unistall the jenkin and want to follow the steps again
-
-##To unistall jenkin follow this
-
-    sudo apt-get remove jenkins
-    sudo apt-get remove --auto-remove jenkins
-
+and countinue the installation other wise you need to downgrade or uninstall the jenkin and want to follow the steps again
 
 Great now you have sucessfully installed jenkins
 
@@ -196,9 +193,109 @@ In screen shot the jenkin say what went wrong this is a awesome feature, so that
 if the you complete this tutorial you have set your first jenkin continuous integration (CI) Sucessfully.(Cheers)
 
 
+
+##To unistall jenkin follow this for ubandu
+
+    sudo apt-get remove jenkins
+    sudo apt-get remove --auto-remove jenkins
+
+
+
+
 ##Travis
 
-//Travis document is comming please wait :)
+Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub.
+Open source projects may be tested at no charge via travis-ci.org. Private projects may be tested at the same location on a fee basis. TravisPro provides custom deployments of a proprietary version on the customer's own hardware.
+
+Although the source is technically free software and available piecemeal on GitHub under permissive licenses, the company notes that it is unlikely that casual users could successfully integrate it on their own platforms
+
+Travis CI is configured by adding a file named .travis.yml, which is a YAML format text file, to the root directory of the repository.[5] This file specifies the programming language used, the desired building and testing environment (including dependencies which must be installed before the software can be built and tested), and various other parameters.
+
+
+
+Setting Travis is way more easier that jenkin
+
+1)Go to https://travis-ci.org/ register using your github account
+
+2)After registraion all your public repo will get listed in your travis account 
+
+3)Select the Project you want to add
+
+4)Adding .travis.yml in to our project root before commiting the code again if you want to execute Ci in Travis
+
+
+make .travis.yml file and add
+
+    language: android
+    android:
+      components:
+        # Uncomment the lines below if you want to
+        # use the latest revision of Android SDK Tools
+        # - platform-tools
+        # - tools
+
+        # The BuildTools version used by your project
+        - build-tools-25.0.0
+
+        # The SDK version used to compile your project
+        - android-25
+
+
+        # Specify at least one system image,
+        # if you need to run emulator(s) during your tests
+        - sys-img-armeabi-v7a-android-22
+        - sys-img-armeabi-v7a-android-17
+
+    before_install:
+        # Some times we need to Specify to access gradlew
+        - chmod +x gradlew
+
+you can take a copy of the file from this [link](https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/file/.travis.yml).
+
+and add in the parent folder of your project
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f0.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f0.png" alt="f0" style="max-width:100%;"></a></p>
+
+
+if you set the yml file just commit your project
+
+and go to the travis console 
+
+if your build is a sucess the log will be some thing like screen below with lable build Passing
+
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f1.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f1.png" alt="f1" style="max-width:100%;"></a></p>
+
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f2.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f2.png" alt="f2" style="max-width:100%;"></a></p>
+
+if your build is a failing the log will be some thing like screen below with lable build failing
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f3.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f3.png" alt="f3" style="max-width:100%;"></a></p>
+
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f4.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f4.png" alt="f4" style="max-width:100%;"></a></p>
+
+
+So travis is so simple as we compare with jenkin.
+
+Optional: you can add your project build status in your readme by giving the 
+
+##[![master](https://api.travis-ci.org/yourprofilename/yourproject.svg?branch=master)](https://travis-ci.org/yourprofilename/yourproject)
+
+so that you can find easily whether you build is a pass or fail
+
+it look like this
+
+<p><a href="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f5.png" target="_blank"><img src="https://raw.githubusercontent.com/rameshvoltella/AndroidEssentials/master/ContinuousIntegration/screens/travis/f5.png" alt="f5" style="max-width:100%;"></a></p>
+
+
+
+Hope the CI Tutorial is useful to you guys Happy Coding and CI
+
+
+
+ 
 
 
 
