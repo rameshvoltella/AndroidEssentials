@@ -11,7 +11,7 @@ AndroidEssentials is module which give some of important things we should take c
 
 ## Continuous Integration 
 
-## Model View Presenter //Todo
+## Model View Presenter
 
 ## Improving the performance of Gradle builds //Todo
 
